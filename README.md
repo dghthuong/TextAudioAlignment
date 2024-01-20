@@ -11,11 +11,17 @@ Extract compressed file.
 4. python prepare_align.py ./config/preprocess.yaml 
 
 5. Download acoustic model and dictionary MFA, store into ./mfa folder
+   
 https://drive.google.com/file/d/1w3hkJ4s3UCxUHjyjgH8rpI83LqOGa07L/view?usp=sharing
 
 https://drive.google.com/file/d/11YG0yRNkHVxdvceRk-H1-64xgOsFOfUo/view?usp=sharing
 
-6. mfa align -t ./temp ./mfa_data/vivos ./mfa/vi_lexicon.dict ./mfa/vi_mfa.zip ./preprocessed_data/TextGrid/vivos1
+6. Download TextGrid for TextAudioAlignment and skip step 7
+
+https://drive.google.com/file/d/16o8dKG1HY6auxhRdip4PgCNCToV7Hw0n/view?usp=sharing
+Extract and Store in folder (look like this): ./TextAudioAlignment/preprocessed_data/TextGrid/vivos
+
+7. mfa align -t ./temp ./mfa_data/vivos ./mfa/vi_lexicon.dict ./mfa/vi_mfa.zip ./preprocessed_data/TextGrid/vivos1
 
 python fix_align.py preprocessed_data/TextGrid/vivos1 preprocessed_data/TextGrid/vivos
 
@@ -27,4 +33,4 @@ python fix_align.py preprocessed_data/TextGrid/vinbigdata1 preprocessed_data/Tex
 
 rm -r ./preprocessed_data/TextGrid/vinbigdata1
 
-7. python preprocess.py ./config/preprocess.yaml 
+8. python preprocess.py ./config/preprocess.yaml 
