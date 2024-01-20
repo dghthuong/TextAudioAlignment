@@ -10,7 +10,12 @@ Extract compressed file.
 
 4. python prepare_align.py ./config/preprocess.yaml 
 
-5. mfa align -t ./temp ./mfa_data/vivos ./mfa/vi_lexicon.dict ./mfa/vi_mfa.zip ./preprocessed_data/TextGrid/vivos1
+5. Download acoustic model and dictionary MFA, store into ./mfa folder
+https://drive.google.com/file/d/1w3hkJ4s3UCxUHjyjgH8rpI83LqOGa07L/view?usp=sharing
+
+https://drive.google.com/file/d/11YG0yRNkHVxdvceRk-H1-64xgOsFOfUo/view?usp=sharing
+
+6. mfa align -t ./temp ./mfa_data/vivos ./mfa/vi_lexicon.dict ./mfa/vi_mfa.zip ./preprocessed_data/TextGrid/vivos1
 
 python fix_align.py preprocessed_data/TextGrid/vivos1 preprocessed_data/TextGrid/vivos
 
@@ -22,4 +27,4 @@ python fix_align.py preprocessed_data/TextGrid/vinbigdata1 preprocessed_data/Tex
 
 rm -r ./preprocessed_data/TextGrid/vinbigdata1
 
-6. python preprocess.py ./config/preprocess.yaml 
+7. python preprocess.py ./config/preprocess.yaml 
